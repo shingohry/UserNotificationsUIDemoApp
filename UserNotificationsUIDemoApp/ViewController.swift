@@ -7,19 +7,38 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
-
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let category = UNNotificationCategory(identifier: "myNotificationCategory",
+                                              actions: [],
+                                              intentIdentifiers: [],
+                                              options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // MARK: - Action
+    
+    @IBAction func buttonDidTap(_ sender: AnyObject) {
+        let content = UNMutableNotificationContent()
+        content.title = "Hey guys"
+        content.body = "What's going on here?"
+        content.categoryIdentifier = "myNotificationCategory"
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+                                                             repeats: false)
+        let request = UNNotificationRequest.init(identifier: "myNotification",
+                                                 content: content,
+                                                 trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
 }
-
