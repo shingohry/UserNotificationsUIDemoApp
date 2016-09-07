@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96C501F1D801FA700C6AF91 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AB97571D7D769A0038CD58 /* UserNotifications.framework */; };
+		C96C50201D801FA700C6AF91 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AB97591D7D769A0038CD58 /* UserNotificationsUI.framework */; };
+		C96C50231D801FA700C6AF91 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96C50221D801FA700C6AF91 /* NotificationViewController.swift */; };
+		C96C50261D801FA700C6AF91 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96C50241D801FA700C6AF91 /* MainInterface.storyboard */; };
+		C96C502A1D801FA700C6AF91 /* SecondNotificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C96C501E1D801FA700C6AF91 /* SecondNotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C9AB97401D7D75E80038CD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB973F1D7D75E80038CD58 /* AppDelegate.swift */; };
 		C9AB97421D7D75E80038CD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB97411D7D75E80038CD58 /* ViewController.swift */; };
 		C9AB97451D7D75E80038CD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB97431D7D75E80038CD58 /* Main.storyboard */; };
@@ -20,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C96C50281D801FA700C6AF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9AB97341D7D75E80038CD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96C501D1D801FA700C6AF91;
+			remoteInfo = SecondNotificationContentExtension;
+		};
 		C9AB97621D7D769A0038CD58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9AB97341D7D75E80038CD58 /* Project object */;
@@ -37,6 +49,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				C9AB97641D7D769A0038CD58 /* NotificationContentExtension.appex in Embed App Extensions */,
+				C96C502A1D801FA700C6AF91 /* SecondNotificationContentExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C96C501E1D801FA700C6AF91 /* SecondNotificationContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SecondNotificationContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96C50221D801FA700C6AF91 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		C96C50251D801FA700C6AF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C96C50271D801FA700C6AF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AB973C1D7D75E80038CD58 /* UserNotificationsUIDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotificationsUIDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB973F1D7D75E80038CD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AB97411D7D75E80038CD58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +77,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C96C501B1D801FA700C6AF91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96C50201D801FA700C6AF91 /* UserNotificationsUI.framework in Frameworks */,
+				C96C501F1D801FA700C6AF91 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9AB97391D7D75E80038CD58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,11 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C96C50211D801FA700C6AF91 /* SecondNotificationContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C96C50221D801FA700C6AF91 /* NotificationViewController.swift */,
+				C96C50241D801FA700C6AF91 /* MainInterface.storyboard */,
+				C96C50271D801FA700C6AF91 /* Info.plist */,
+			);
+			path = SecondNotificationContentExtension;
+			sourceTree = "<group>";
+		};
 		C9AB97331D7D75E80038CD58 = {
 			isa = PBXGroup;
 			children = (
 				C9AB973E1D7D75E80038CD58 /* UserNotificationsUIDemoApp */,
 				C9AB975B1D7D769A0038CD58 /* NotificationContentExtension */,
+				C96C50211D801FA700C6AF91 /* SecondNotificationContentExtension */,
 				C9AB97561D7D769A0038CD58 /* Frameworks */,
 				C9AB973D1D7D75E80038CD58 /* Products */,
 			);
@@ -94,6 +131,7 @@
 			children = (
 				C9AB973C1D7D75E80038CD58 /* UserNotificationsUIDemoApp.app */,
 				C9AB97551D7D769A0038CD58 /* NotificationContentExtension.appex */,
+				C96C501E1D801FA700C6AF91 /* SecondNotificationContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +171,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C96C501D1D801FA700C6AF91 /* SecondNotificationContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96C502D1D801FA700C6AF91 /* Build configuration list for PBXNativeTarget "SecondNotificationContentExtension" */;
+			buildPhases = (
+				C96C501A1D801FA700C6AF91 /* Sources */,
+				C96C501B1D801FA700C6AF91 /* Frameworks */,
+				C96C501C1D801FA700C6AF91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecondNotificationContentExtension;
+			productName = SecondNotificationContentExtension;
+			productReference = C96C501E1D801FA700C6AF91 /* SecondNotificationContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C9AB973B1D7D75E80038CD58 /* UserNotificationsUIDemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9AB974E1D7D75E80038CD58 /* Build configuration list for PBXNativeTarget "UserNotificationsUIDemoApp" */;
@@ -146,6 +201,7 @@
 			);
 			dependencies = (
 				C9AB97631D7D769A0038CD58 /* PBXTargetDependency */,
+				C96C50291D801FA700C6AF91 /* PBXTargetDependency */,
 			);
 			name = UserNotificationsUIDemoApp;
 			productName = UserNotificationsUIDemoApp;
@@ -179,6 +235,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Shingo Hiraya";
 				TargetAttributes = {
+					C96C501D1D801FA700C6AF91 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					C9AB973B1D7D75E80038CD58 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -204,11 +264,20 @@
 			targets = (
 				C9AB973B1D7D75E80038CD58 /* UserNotificationsUIDemoApp */,
 				C9AB97541D7D769A0038CD58 /* NotificationContentExtension */,
+				C96C501D1D801FA700C6AF91 /* SecondNotificationContentExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C96C501C1D801FA700C6AF91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96C50261D801FA700C6AF91 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9AB973A1D7D75E80038CD58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +299,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C96C501A1D801FA700C6AF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96C50231D801FA700C6AF91 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9AB97381D7D75E80038CD58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +327,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C96C50291D801FA700C6AF91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96C501D1D801FA700C6AF91 /* SecondNotificationContentExtension */;
+			targetProxy = C96C50281D801FA700C6AF91 /* PBXContainerItemProxy */;
+		};
 		C9AB97631D7D769A0038CD58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9AB97541D7D769A0038CD58 /* NotificationContentExtension */;
@@ -258,6 +340,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C96C50241D801FA700C6AF91 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96C50251D801FA700C6AF91 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		C9AB97431D7D75E80038CD58 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +375,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C96C502B1D801FA700C6AF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SecondNotificationContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shingohry.UserNotificationsUIDemoApp.SecondNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C96C502C1D801FA700C6AF91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SecondNotificationContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shingohry.UserNotificationsUIDemoApp.SecondNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		C9AB974C1D7D75E80038CD58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,6 +543,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C96C502D1D801FA700C6AF91 /* Build configuration list for PBXNativeTarget "SecondNotificationContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96C502B1D801FA700C6AF91 /* Debug */,
+				C96C502C1D801FA700C6AF91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C9AB97371D7D75E80038CD58 /* Build configuration list for PBXProject "UserNotificationsUIDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -445,6 +567,7 @@
 				C9AB97501D7D75E80038CD58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9AB97651D7D769A0038CD58 /* Build configuration list for PBXNativeTarget "NotificationContentExtension" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +576,7 @@
 				C9AB97671D7D769A0038CD58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
