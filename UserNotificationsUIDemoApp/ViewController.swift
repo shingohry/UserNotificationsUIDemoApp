@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     // MARK: - Action
     
-    @IBAction func buttonDidTap(_ sender: AnyObject) {
+    @IBAction func addDefaultNotificationButtonDidTap(_ sender: AnyObject) {
         let content = UNMutableNotificationContent()
         content.title = "Hey guys"
         content.body = "What's going on here?"
