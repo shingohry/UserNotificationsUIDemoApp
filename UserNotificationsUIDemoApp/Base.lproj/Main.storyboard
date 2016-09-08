@@ -18,17 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlS-15-3me">
-                                <state key="normal" title="Add Default Notification"/>
-                                <connections>
-                                    <action selector="addDefaultNotificationButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgN-fq-XRg"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-x4-uol">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlS-15-3me">
+                                        <state key="normal" title="Add Default Notification"/>
+                                        <connections>
+                                            <action selector="addDefaultNotificationButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgN-fq-XRg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOh-Io-1f7">
+                                        <state key="normal" title="Add Notification with attachment"/>
+                                        <connections>
+                                            <action selector="addNotificationWithAttachmentButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8A-EI-rKa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NlS-15-3me" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Yv-W2-nX4"/>
-                            <constraint firstItem="NlS-15-3me" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acx-py-ytT"/>
+                            <constraint firstItem="RYA-x4-uol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9eH-He-wWU"/>
+                            <constraint firstItem="RYA-x4-uol" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zMW-og-xFV"/>
                         </constraints>
                     </view>
                 </viewController>

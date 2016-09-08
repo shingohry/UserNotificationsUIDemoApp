@@ -15,11 +15,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let category = UNNotificationCategory(identifier: "myNotificationCategory",
+        let myNotificationCategory = UNNotificationCategory(identifier: "myNotificationCategory",
                                               actions: [],
                                               intentIdentifiers: [],
                                               options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([category])
+        let withAttachmentCategory = UNNotificationCategory(identifier: "withAttachmentCategory",
+                                              actions: [],
+                                              intentIdentifiers: [],
+                                              options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([myNotificationCategory, withAttachmentCategory])
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +41,31 @@ class ViewController: UIViewController {
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "myNotification",
+                                                 content: content,
+                                                 trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    @IBAction func addNotificationWithAttachmentButtonDidTap(_ sender: AnyObject) {
+        let content = UNMutableNotificationContent()
+        content.title = "Rich notifications"
+        content.body = "View photos and videos or respond to a message right in your notifications."
+        content.categoryIdentifier = "withAttachmentCategory"
+        
+        let imageURL = Bundle.main.url(forResource: "image",
+                                       withExtension: "jpg")
+        do {
+            let attachment = try UNNotificationAttachment(identifier: "SampleAttachment",
+                                                          url: imageURL!,
+                                                          options: nil)
+            content.attachments = [attachment]
+        } catch  {
+            print("make attachment error!")
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+                                                             repeats: false)
+        let request = UNNotificationRequest.init(identifier: "withAttachmentNotification",
                                                  content: content,
                                                  trigger: trigger)
         UNUserNotificationCenter.current().add(request)

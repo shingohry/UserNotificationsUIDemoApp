@@ -12,6 +12,7 @@
 		C96C50231D801FA700C6AF91 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96C50221D801FA700C6AF91 /* NotificationViewController.swift */; };
 		C96C50261D801FA700C6AF91 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96C50241D801FA700C6AF91 /* MainInterface.storyboard */; };
 		C96C502A1D801FA700C6AF91 /* SecondNotificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C96C501E1D801FA700C6AF91 /* SecondNotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C96C502F1D80213300C6AF91 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96C502E1D80213300C6AF91 /* image.jpg */; };
 		C9AB97401D7D75E80038CD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB973F1D7D75E80038CD58 /* AppDelegate.swift */; };
 		C9AB97421D7D75E80038CD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB97411D7D75E80038CD58 /* ViewController.swift */; };
 		C9AB97451D7D75E80038CD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB97431D7D75E80038CD58 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		C96C50221D801FA700C6AF91 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		C96C50251D801FA700C6AF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C96C50271D801FA700C6AF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96C502E1D80213300C6AF91 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		C9AB973C1D7D75E80038CD58 /* UserNotificationsUIDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotificationsUIDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB973F1D7D75E80038CD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AB97411D7D75E80038CD58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				C9AB97411D7D75E80038CD58 /* ViewController.swift */,
 				C9AB97431D7D75E80038CD58 /* Main.storyboard */,
 				C9AB97461D7D75E80038CD58 /* Assets.xcassets */,
+				C96C502E1D80213300C6AF91 /* image.jpg */,
 				C9AB97481D7D75E80038CD58 /* LaunchScreen.storyboard */,
 				C9AB974B1D7D75E80038CD58 /* Info.plist */,
 			);
@@ -285,6 +288,7 @@
 				C9AB974A1D7D75E80038CD58 /* LaunchScreen.storyboard in Resources */,
 				C9AB97471D7D75E80038CD58 /* Assets.xcassets in Resources */,
 				C9AB97451D7D75E80038CD58 /* Main.storyboard in Resources */,
+				C96C502F1D80213300C6AF91 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
