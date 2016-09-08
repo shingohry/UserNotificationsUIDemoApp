@@ -12,15 +12,27 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    @IBOutlet var label: UILabel?
+    @IBOutlet var titleLabel: UILabel?
+    @IBOutlet var bodyLabel: UILabel?
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any required interface initialization here.
+        
+        print("self.preferredContentSize:\(self.preferredContentSize)")
     }
     
     func didReceive(_ notification: UNNotification) {
-        self.label?.text = notification.request.content.body
+        let content = notification.request.content
+        
+        self.titleLabel?.text = content.title
+        self.bodyLabel?.text = content.body
+        
+        if let attachment = content.attachments.first {
+            if attachment.url.startAccessingSecurityScopedResource() {
+                self.imageView.image = UIImage(contentsOfFile: attachment.url.path)
+                attachment.url.stopAccessingSecurityScopedResource()
+            }
+        }
     }
-
 }
