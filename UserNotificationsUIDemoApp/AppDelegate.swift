@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     // MARK: - Properties
     
     var window: UIWindow?
@@ -22,6 +22,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("granted:\(granted)")
         }
         
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
+    }
+    
+    // MARK: - UNUserNotificationCenterDelegate
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("[contains app] notification identifier: \(response.notification.request.identifier)")
+        print("[contains app] actionIdentifier: \(response.actionIdentifier)")
+        print("[contains app] categoryIdentifier: \(response.notification.request.content.categoryIdentifier)")
+        
+        if let textInputResponse = response as? UNTextInputNotificationResponse {
+            print("[contains app] userText:\(textInputResponse.userText)")
+        }
+        
+        completionHandler()
     }
 }
