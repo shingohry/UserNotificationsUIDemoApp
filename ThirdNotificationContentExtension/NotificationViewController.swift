@@ -20,6 +20,25 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     func didReceive(_ notification: UNNotification) {
+        print(Date(), #function, #line)
+        
         self.label?.text = notification.request.content.body
+    }
+    
+    func didReceive(_ response: UNNotificationResponse,
+                    completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Swift.Void) {
+        print(Date(), #function, #line)
+        
+        print("response.actionIdentifier:\(response.actionIdentifier)")
+        
+        // get userText
+        if let textInputResponse = response as? UNTextInputNotificationResponse {
+            print("userText:\(textInputResponse.userText)")
+        }
+        
+        // .doNotDismiss: Do not dismiss the notification interface. The content extension handles the selected action.
+        // .dismiss: Dismiss the notification interface. The content extension handles the selected action.
+        // .dismissAndForwardAction: Dismiss the notification interface and forward the notification to the app. Choose this option when you want the app to respond to the action or handle it.
+        completion(.dismiss)
     }
 }
