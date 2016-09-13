@@ -33,6 +33,7 @@
 		C9AB975D1D7D769A0038CD58 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB975C1D7D769A0038CD58 /* NotificationViewController.swift */; };
 		C9AB97601D7D769A0038CD58 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB975E1D7D769A0038CD58 /* MainInterface.storyboard */; };
 		C9AB97641D7D769A0038CD58 /* NotificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C9AB97551D7D769A0038CD58 /* NotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C9C034D81D882DA20088FBDB /* loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = C9C034D71D882DA20088FBDB /* loop.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		C9AB975C1D7D769A0038CD58 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		C9AB975F1D7D769A0038CD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C9AB97611D7D769A0038CD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C034D71D882DA20088FBDB /* loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = loop.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				C9AB97431D7D75E80038CD58 /* Main.storyboard */,
 				C9AB97461D7D75E80038CD58 /* Assets.xcassets */,
 				C96C502E1D80213300C6AF91 /* image.jpg */,
+				C9C034D71D882DA20088FBDB /* loop.aif */,
 				C9AB97481D7D75E80038CD58 /* LaunchScreen.storyboard */,
 				C9AB974B1D7D75E80038CD58 /* Info.plist */,
 			);
@@ -426,6 +429,7 @@
 				C9AB974A1D7D75E80038CD58 /* LaunchScreen.storyboard in Resources */,
 				C9AB97471D7D75E80038CD58 /* Assets.xcassets in Resources */,
 				C9AB97451D7D75E80038CD58 /* Main.storyboard in Resources */,
+				C9C034D81D882DA20088FBDB /* loop.aif in Resources */,
 				C96C502F1D80213300C6AF91 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,6 +804,7 @@
 				C97F2DFA1D880AC200C27FAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9AB97371D7D75E80038CD58 /* Build configuration list for PBXProject "UserNotificationsUIDemoApp" */ = {
 			isa = XCConfigurationList;

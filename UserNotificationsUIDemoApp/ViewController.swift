@@ -102,4 +102,29 @@ class ViewController: UIViewController {
                                                  trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
+    
+    @IBAction func addNotificationWithMediaPlayButtonDidTap(_ sender: AnyObject) {
+        let content = UNMutableNotificationContent()
+        content.title = "Hey guys"
+        content.body = "Let's play!"
+        content.categoryIdentifier = "mediaPlayCategory"
+        
+        let imageURL = Bundle.main.url(forResource: "loop",
+                                       withExtension: "aif")
+        do {
+            let attachment = try UNNotificationAttachment(identifier: "music",
+                                                          url: imageURL!,
+                                                          options: nil)
+            content.attachments = [attachment]
+        } catch  {
+            print("make attachment error!")
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+                                                             repeats: false)
+        let request = UNNotificationRequest.init(identifier: "mediaPlayNotification",
+                                                 content: content,
+                                                 trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
 }
