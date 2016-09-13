@@ -19,11 +19,29 @@ class ViewController: UIViewController {
                                               actions: [],
                                               intentIdentifiers: [],
                                               options: [])
+        
         let withAttachmentCategory = UNNotificationCategory(identifier: "withAttachmentCategory",
                                               actions: [],
                                               intentIdentifiers: [],
                                               options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([myNotificationCategory, withAttachmentCategory])
+        
+        let textInputAction = UNTextInputNotificationAction(identifier: "textInputActionId",
+                                                            title: "TextInput",
+                                                            options:[],
+                                                            textInputButtonTitle: "Send",
+                                                            textInputPlaceholder: "Enter Text")
+        let replyAction = UNNotificationAction(identifier:"replyActionId",
+                                               title:"Reply",
+                                               options:[])
+        let deleteAction = UNNotificationAction(identifier:"deleteActionIdentifier",
+                                                title:"Delete",
+                                                options:[.destructive, .authenticationRequired])
+        let withActionCategory = UNNotificationCategory(identifier: "withActionCategory",
+                                                        actions: [textInputAction, replyAction, deleteAction],
+                                                        intentIdentifiers: [],
+                                                        options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([myNotificationCategory, withAttachmentCategory, withActionCategory])
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +84,20 @@ class ViewController: UIViewController {
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "withAttachmentNotification",
+                                                 content: content,
+                                                 trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    @IBAction func addNotificationWithActionButtonDidTap(_ sender: AnyObject) {
+        let content = UNMutableNotificationContent()
+        content.title = "Hey guys"
+        content.body = "What's going on here?"
+        content.categoryIdentifier = "withActionCategory"
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+                                                             repeats: false)
+        let request = UNNotificationRequest.init(identifier: "withActionNotification",
                                                  content: content,
                                                  trigger: trigger)
         UNUserNotificationCenter.current().add(request)
