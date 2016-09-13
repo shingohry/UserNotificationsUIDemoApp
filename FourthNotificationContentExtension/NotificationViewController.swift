@@ -28,13 +28,19 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
              overlay:
                 A partially transparent play/pause button that is layered on top of your media content. This button draws a play icon over the content initially. When playback begins, the button disappears. Tapping the content again pauses playback and displays the play button again.
             */
-            return .overlay
+            return .default
         }
     }
     
     var mediaPlayPauseButtonFrame: CGRect {
         get {
             return CGRect(x: 20.0, y: 10.0, width: 30.0, height: 30.0)
+        }
+    }
+    
+    var mediaPlayPauseButtonTintColor: UIColor {
+        get {
+            return UIColor.darkGray
         }
     }
     
