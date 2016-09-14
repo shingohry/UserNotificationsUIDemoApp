@@ -1,8 +1,8 @@
 //
 //  NotificationViewController.swift
-//  SecondNotificationContentExtension
+//  WithAttachmentExtension
 //
-//  Created by hiraya.shingo on 9/7/16.
+//  Created by hiraya.shingo on 9/14/16.
 //  Copyright © 2016 Shingo Hiraya. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UserNotifications
 import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
-
+    
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var bodyLabel: UILabel?
     @IBOutlet weak var imageView: UIImageView!
@@ -36,3 +36,4 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         }
     }
 }
+
