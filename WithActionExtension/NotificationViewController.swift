@@ -1,8 +1,8 @@
 //
 //  NotificationViewController.swift
-//  ThirdNotificationContentExtension
+//  WithActionExtension
 //
-//  Created by 平屋真吾 on 2016/09/13.
+//  Created by hiraya.shingo on 9/14/16.
 //  Copyright © 2016 Shingo Hiraya. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UserNotifications
 import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
-
+    
     @IBOutlet var label: UILabel?
     
     override func viewDidLoad() {
@@ -42,3 +42,4 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         completion(.dismiss)
     }
 }
+
