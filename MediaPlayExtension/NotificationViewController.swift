@@ -1,8 +1,8 @@
 //
 //  NotificationViewController.swift
-//  FourthNotificationContentExtension
+//  MediaPlayExtension
 //
-//  Created by 平屋真吾 on 2016/09/13.
+//  Created by hiraya.shingo on 9/14/16.
 //  Copyright © 2016 Shingo Hiraya. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import UserNotificationsUI
 import AVFoundation
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
-
+    
     // MARK: - Properties
     
     @IBOutlet var label: UILabel?
@@ -22,12 +22,12 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         get {
             /**
              none:
-                No media button. Specify this option when you do not want a media button. This is the default option.
+             No media button. Specify this option when you do not want a media button. This is the default option.
              `default`:
-                A standard play/pause button. This button is always visible. When tapped, its appearance changes between the play and  pause icons and triggers the appropriate play and pause actions.
+             A standard play/pause button. This button is always visible. When tapped, its appearance changes between the play and  pause icons and triggers the appropriate play and pause actions.
              overlay:
-                A partially transparent play/pause button that is layered on top of your media content. This button draws a play icon over the content initially. When playback begins, the button disappears. Tapping the content again pauses playback and displays the play button again.
-            */
+             A partially transparent play/pause button that is layered on top of your media content. This button draws a play icon over the content initially. When playback begins, the button disappears. Tapping the content again pauses playback and displays the play button again.
+             */
             return .default
         }
     }

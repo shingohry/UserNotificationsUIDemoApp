@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>FourthNotificationContentExtension</string>
+	<string>MediaPlayExtension</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,21 +20,21 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>UNNotificationExtensionDefaultContentHidden</key>
-			<true/>
-			<key>UNNotificationExtensionCategory</key>
-			<string>mediaPlayCategory</string>
-			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>1</real>
-		</dict>
-		<key>NSExtensionMainStoryboard</key>
-		<string>MainInterface</string>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.usernotifications.content-extension</string>
-	</dict>
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionAttributes</key>
+        <dict>
+            <key>UNNotificationExtensionDefaultContentHidden</key>
+            <true/>
+            <key>UNNotificationExtensionCategory</key>
+            <string>mediaPlayCategory</string>
+            <key>UNNotificationExtensionInitialContentSizeRatio</key>
+            <real>1</real>
+        </dict>
+        <key>NSExtensionMainStoryboard</key>
+        <string>MainInterface</string>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.usernotifications.content-extension</string>
+    </dict>
 </dict>
 </plist>
