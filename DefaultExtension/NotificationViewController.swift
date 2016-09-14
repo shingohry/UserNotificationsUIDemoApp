@@ -1,8 +1,8 @@
 //
 //  NotificationViewController.swift
-//  NotificationContentExtension
+//  DefaultExtension
 //
-//  Created by hiraya.shingo on 9/5/16.
+//  Created by hiraya.shingo on 9/14/16.
 //  Copyright © 2016 Shingo Hiraya. All rights reserved.
 //
 
