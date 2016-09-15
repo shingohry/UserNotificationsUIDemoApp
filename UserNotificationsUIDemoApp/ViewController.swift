@@ -72,7 +72,7 @@ class ViewController: UITableViewController {
         content.body = "What's going on here?"
         content.categoryIdentifier = "myNotificationCategory"
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "myNotification",
                                                  content: content,
@@ -97,7 +97,7 @@ class ViewController: UITableViewController {
             print("make attachment error!")
         }
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "withAttachmentNotification",
                                                  content: content,
@@ -111,7 +111,7 @@ class ViewController: UITableViewController {
         content.body = "What's going on here?"
         content.categoryIdentifier = "withActionCategory"
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "withActionNotification",
                                                  content: content,
@@ -136,7 +136,7 @@ class ViewController: UITableViewController {
             print("make attachment error!")
         }
         
-        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 5,
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1,
                                                              repeats: false)
         let request = UNNotificationRequest.init(identifier: "mediaPlayNotification",
                                                  content: content,
