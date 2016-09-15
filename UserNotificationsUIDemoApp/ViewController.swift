@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -48,9 +48,25 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Action
+    // MARK: - UITableViewDelegate
     
-    @IBAction func addDefaultNotificationButtonDidTap(_ sender: AnyObject) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("indexPath:\(indexPath)")
+        
+        if indexPath.row == 0 {
+            self.addDefaultNotification()
+        } else if indexPath.row == 1 {
+            self.addNotificationWithAttachment()
+        } else if indexPath.row == 2 {
+            self.addNotificationWithAction()
+        } else {
+            self.addNotificationWithMediaPlay()
+        }
+    }
+    
+    // MARK: - Private
+    
+    func addDefaultNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Hey guys"
         content.body = "What's going on here?"
@@ -64,7 +80,7 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request)
     }
     
-    @IBAction func addNotificationWithAttachmentButtonDidTap(_ sender: AnyObject) {
+    func addNotificationWithAttachment() {
         let content = UNMutableNotificationContent()
         content.title = "Rich notifications"
         content.body = "View photos and videos or respond to a message right in your notifications."
@@ -89,7 +105,7 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request)
     }
     
-    @IBAction func addNotificationWithActionButtonDidTap(_ sender: AnyObject) {
+    func addNotificationWithAction() {
         let content = UNMutableNotificationContent()
         content.title = "Hey guys"
         content.body = "What's going on here?"
@@ -103,7 +119,7 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().add(request)
     }
     
-    @IBAction func addNotificationWithMediaPlayButtonDidTap(_ sender: AnyObject) {
+    func addNotificationWithMediaPlay() {
         let content = UNMutableNotificationContent()
         content.title = "Hey guys"
         content.body = "Let's play!"
