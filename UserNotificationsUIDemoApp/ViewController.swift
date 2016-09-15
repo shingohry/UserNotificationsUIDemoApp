@@ -51,8 +51,6 @@ class ViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("indexPath:\(indexPath)")
-        
         if indexPath.row == 0 {
             self.addDefaultNotification()
         } else if indexPath.row == 1 {
@@ -62,6 +60,8 @@ class ViewController: UITableViewController {
         } else {
             self.addNotificationWithMediaPlay()
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: - Private
